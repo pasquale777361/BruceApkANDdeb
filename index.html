@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRUCE | The Ultimate Hacking Multi-Tool</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-color: #050505;
@@ -30,7 +33,9 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Rajdhani', sans-serif;
             text-transform: uppercase;
         }
@@ -46,12 +51,35 @@
         }
 
         @keyframes glitch-anim {
-            0% { text-shadow: 2px 2px var(--accent-color), -2px -2px var(--secondary-color); transform: translate(0); }
-            20% { text-shadow: -2px -2px var(--accent-color), 2px 2px var(--secondary-color); transform: translate(-2px, 2px); }
-            40% { text-shadow: 2px -2px var(--accent-color), -2px 2px var(--secondary-color); transform: translate(2px, -2px); }
-            60% { text-shadow: -2px 2px var(--accent-color), 2px -2px var(--secondary-color); transform: translate(-2px, -2px); }
-            80% { text-shadow: 2px 2px var(--accent-color), -2px -2px var(--secondary-color); transform: translate(2px, 2px); }
-            100% { text-shadow: -2px -2px var(--accent-color), 2px 2px var(--secondary-color); transform: translate(0); }
+            0% {
+                text-shadow: 2px 2px var(--accent-color), -2px -2px var(--secondary-color);
+                transform: translate(0);
+            }
+
+            20% {
+                text-shadow: -2px -2px var(--accent-color), 2px 2px var(--secondary-color);
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                text-shadow: 2px -2px var(--accent-color), -2px 2px var(--secondary-color);
+                transform: translate(2px, -2px);
+            }
+
+            60% {
+                text-shadow: -2px 2px var(--accent-color), 2px -2px var(--secondary-color);
+                transform: translate(-2px, -2px);
+            }
+
+            80% {
+                text-shadow: 2px 2px var(--accent-color), -2px -2px var(--secondary-color);
+                transform: translate(2px, 2px);
+            }
+
+            100% {
+                text-shadow: -2px -2px var(--accent-color), 2px 2px var(--secondary-color);
+                transform: translate(0);
+            }
         }
 
         /* Hero Section */
@@ -73,13 +101,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 1px,
-                rgba(187, 134, 252, 0.05) 1px,
-                rgba(187, 134, 252, 0.05) 2px
-            );
+            background: repeating-linear-gradient(0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(187, 134, 252, 0.05) 1px,
+                    rgba(187, 134, 252, 0.05) 2px);
             pointer-events: none;
         }
 
@@ -197,7 +223,7 @@
             max-width: 800px;
             background-color: #1e1e1e;
             border-radius: 5px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             font-family: 'JetBrains Mono', monospace;
         }
@@ -216,9 +242,17 @@
             border-radius: 50%;
         }
 
-        .dot.red { background-color: #ff5f56; }
-        .dot.yellow { background-color: #ffbd2e; }
-        .dot.green { background-color: #27c93f; }
+        .dot.red {
+            background-color: #ff5f56;
+        }
+
+        .dot.yellow {
+            background-color: #ffbd2e;
+        }
+
+        .dot.green {
+            background-color: #27c93f;
+        }
 
         .terminal-body {
             padding: 20px;
@@ -227,9 +261,17 @@
             overflow-y: auto;
         }
 
-        .prompt { color: var(--secondary-color); }
-        .cmd { color: #fff; }
-        .output { color: #bbb; }
+        .prompt {
+            color: var(--secondary-color);
+        }
+
+        .cmd {
+            color: #fff;
+        }
+
+        .output {
+            color: #bbb;
+        }
 
         /* Downloads Section */
         .downloads {
@@ -251,7 +293,8 @@
             background: var(--dark-surface);
         }
 
-        .downloads th, .downloads td {
+        .downloads th,
+        .downloads td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid #333;
@@ -286,6 +329,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <section class="hero">
@@ -300,15 +344,18 @@
     <section class="features">
         <div class="feature-card">
             <h3>Universal Flashing</h3>
-            <p>Flash firmware to any ESP32/ESP8266 device directly from your Android phone or Linux workstation. No drivers needed.</p>
+            <p>Flash firmware to any ESP32/ESP8266 device directly from your Android phone or Linux workstation. No
+                drivers needed.</p>
         </div>
         <div class="feature-card">
             <h3>Serial Terminal</h3>
-            <p>Advanced serial monitor with macro support, baud rate control, and logging capabilities. Debug hardware on the go.</p>
+            <p>Advanced serial monitor with macro support, baud rate control, and logging capabilities. Debug hardware
+                on the go.</p>
         </div>
         <div class="feature-card">
             <h3>Multiplatform</h3>
-            <p>Built with Kotlin Multiplatform. Experience the same powerful tools and interface on Android and Desktop.</p>
+            <p>Built with Kotlin Multiplatform. Experience the same powerful tools and interface on Android and Desktop.
+            </p>
         </div>
         <div class="feature-card">
             <h3>Open Protocol</h3>
@@ -324,7 +371,8 @@
                 <div class="dot green"></div>
             </div>
             <div class="terminal-body" id="terminal-content">
-                <div><span class="prompt">user@bruce:~#</span> <span class="cmd">./bruce flash --device m5stack-cardputer</span></div>
+                <div><span class="prompt">user@bruce:~#</span> <span class="cmd">./bruce flash --device
+                        m5stack-cardputer</span></div>
                 <div class="output">Extracted binaries... OK</div>
                 <div class="output">Connecting to /dev/ttyUSB0... OK</div>
                 <div class="output">Erasing flash... DONE</div>
@@ -354,20 +402,14 @@
                 <tr>
                     <td>Android (APK)</td>
                     <td>1.2.0-stable</td>
-                    <td>8.4 MB</td>
-                    <td><a href="#" class="download-link">Download</a></td>
+                    <td>-</td>
+                    <td><a href="#" class="download-link">Coming Soon (Build Failed)</a></td>
                 </tr>
                 <tr>
                     <td>Linux (Debian/Ubuntu)</td>
-                    <td>1.2.0-stable</td>
+                    <td>1.0.0</td>
                     <td>42 MB</td>
-                    <td><a href="#" class="download-link">Download</a></td>
-                </tr>
-                <tr>
-                    <td>Linux (AppImage)</td>
-                    <td>1.2.0-stable</td>
-                    <td>45 MB</td>
-                    <td><a href="#" class="download-link">Download</a></td>
+                    <td><a href="releases/bruceapp_1.0.0_amd64.deb" class="download-link">Download</a></td>
                 </tr>
             </tbody>
         </table>
@@ -386,4 +428,5 @@
         }, 3000);
     </script>
 </body>
+
 </html>
