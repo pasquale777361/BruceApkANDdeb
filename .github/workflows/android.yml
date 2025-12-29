@@ -1,0 +1,47 @@
+name: Bruce Android Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v2
+      with:
+        api-level: 34
+        build-tools: 34.0.0
+
+    - name: Install Android SDK packages
+      run: |
+        yes | sdkmanager "platforms;android-34" "build-tools;34.0.0"
+
+    - name: Accept Android SDK licenses
+      run: |
+        yes | sdkmanager --licenses
+
+    - name: Build with Gradle
+      run: ./gradlew clean assembleRelease
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: android-apk
+        path: app/build/outputs/apk/release/*.apk
+
